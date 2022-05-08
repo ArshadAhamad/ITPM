@@ -2,7 +2,7 @@ const router = require("express").Router();
 const Post = require("../models/Post");
 const User = require("../models/user");
 
-//create a post
+//create a new post
 
 router.post("/", async (req, res) => {
     const newPost = new Post(req.body);
@@ -14,7 +14,7 @@ router.post("/", async (req, res) => {
     }
   });
 
-  //update a post
+  //update
 
 router.put("/:id", async (req, res) => {
     try {
@@ -30,7 +30,7 @@ router.put("/:id", async (req, res) => {
     }
   });
   
-  //delete a post
+  //delete
 
 router.delete("/:id", async (req, res) => {
     try {
@@ -46,7 +46,7 @@ router.delete("/:id", async (req, res) => {
     }
   });
 
-  //like / dislike a post
+  //like and dislike
 
 router.put("/:id/like", async (req, res) => {
     try {
@@ -63,7 +63,7 @@ router.put("/:id/like", async (req, res) => {
     }
   });
 
-  //get a post
+  // read
 
 router.get("/:id", async (req, res) => {
     try {
@@ -74,7 +74,7 @@ router.get("/:id", async (req, res) => {
     }
   });
 
-  //get timeline posts
+  //get in timeline
 
 router.get("/timeline/:userId", async (req, res) => {
     try {
