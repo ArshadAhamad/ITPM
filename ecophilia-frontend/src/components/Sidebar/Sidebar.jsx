@@ -3,12 +3,12 @@ import {
   RssFeed,
   Chat,
   PlayCircleFilledOutlined,
-  Group,
-  Bookmark,
+  // Group,
+  // Bookmark,
   HelpOutline,
-  WorkOutline,
+  // WorkOutline,
   Event,
-  School,
+  // School,
 } from "@mui/icons-material";
 import { Users } from "../../Dummydata";
 import CloseFriend from "../Friends/Friends";
@@ -30,30 +30,30 @@ export default function Sidebar() {
             <PlayCircleFilledOutlined className="sidebarIcon" />
             <span className="sidebarListItemText">Videos</span>
           </li>
-          <li className="sidebarListItem">
+          {/* <li className="sidebarListItem">
             <Group className="sidebarIcon" />
             <span className="sidebarListItemText">Groups</span>
-          </li>
-          <li className="sidebarListItem">
+          </li> */}
+          {/* <li className="sidebarListItem">
             <Bookmark className="sidebarIcon" />
             <span className="sidebarListItemText">Bookmarks</span>
-          </li>
+          </li> */}
           <li className="sidebarListItem">
             <HelpOutline className="sidebarIcon" />
             <span className="sidebarListItemText">Questions</span>
           </li>
-          <li className="sidebarListItem">
+          {/* <li className="sidebarListItem">
             <WorkOutline className="sidebarIcon" />
             <span className="sidebarListItemText">Jobs</span>
-          </li>
+          </li> */}
           <li className="sidebarListItem">
             <Event className="sidebarIcon" />
             <span className="sidebarListItemText">Events</span>
           </li>
-          <li className="sidebarListItem">
+          {/* <li className="sidebarListItem">
             <School className="sidebarIcon" />
             <span className="sidebarListItemText">Courses</span>
-          </li>
+          </li> */}
         </ul>
         <button className="sidebarButton">Show More</button>
         <hr className="sidebarHr" />
