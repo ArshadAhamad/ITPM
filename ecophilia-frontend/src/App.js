@@ -5,22 +5,28 @@ import Register from "./pages/Register/Register";
 import {
   BrowserRouter as Router,
   Route,
-  Switch
+  Switch,
+  Redirect
 } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "./context/AuthContext";
+
 
 
 function App() {
+  const { user } = useContext(AuthContext);
       return(
         <Router>
           <Switch>
           <Route exact path="/">
+          {user ? <Home /> : <Register />}
               <Home/>
             </Route>
             <Route path="/Login">
-              <Login/>
+            {user ? <Redirect to="/" /> : <Login />}
             </Route>
             <Route path="/Register">
-              <Register/>
+            {user ? <Redirect to="/" /> : <Register />}
             </Route>
             <Route path="/Profile/:username">
               <Profile/>
@@ -28,8 +34,7 @@ function App() {
             
           </Switch>
         </Router>
-      )
-   
+      )  
   
 }
 
