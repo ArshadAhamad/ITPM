@@ -13,7 +13,7 @@ const path = require("path");
 
 dotenv.config();
 
-//new push
+//new push arshad
 mongoose.connect(
   process.env.MONGO_URL,
   { useNewUrlParser: true, useUnifiedTopology: true },
